@@ -19,12 +19,10 @@ public class IsAnagram {
         else{
             largest=t;
         }
-
         for (int i = 0; i < largest.length(); i++) {
             if(!Objects.equals(seen.get(largest.charAt(i)), seen2.get(largest.charAt(i)))){
                 return false;
             }
-
         }
         return true;
     }
