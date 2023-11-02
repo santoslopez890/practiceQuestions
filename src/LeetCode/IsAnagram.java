@@ -40,5 +40,6 @@ public boolean isAnagram2(String s, String t) {
     public static void main(String[] args) {
 
         System.out.println( isAnagram("rat","car"));
+       
     }
 }
