@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ValidSoduku {
+    //What I learned
+    //Using Sets and int division to store cubes of data in A HashSet
+    //2D Arrays
     public boolean isValidSudoku(char[][] board) {
         Set seen = new HashSet();
         for (int i = 0; i < 9; ++i) {

@@ -9,10 +9,12 @@ import java.util.stream.Collectors;
 
 public class TopKFrequent {
     public int[] topKFrequent(int[] nums, int k) {
+        //Used a Linked Hashmap to organize them by their values
         Map<Integer, Integer> intMap = new LinkedHashMap<>();
         for (Integer i : nums) {
             intMap.put(i, intMap.getOrDefault(i, 0) + 1);
         }
+        //then used a stream to sort them by values and then skip the ones we dont want and then collect them to a list
         List<Map.Entry<Integer, Integer>> topKEntries = intMap.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue())
                 .skip(intMap.size() - k)
@@ -20,6 +22,7 @@ public class TopKFrequent {
         // Extract the keys from the top k entries into an Integer array
         int[] result = new int[k];
         for (int i = 0; i < k; i++) {
+            //we are getting the key from i and putting it to the results
             result[i] = topKEntries.get(i).getKey();
         }
         return result;

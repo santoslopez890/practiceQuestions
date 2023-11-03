@@ -4,6 +4,10 @@ import java.util.Stack;
 
 public class validParentheses {
     public boolean isValid(String s) {
+        //What I learned
+        //Using Stacks to Check if next Character is right or wrong
+        //Comparing using stack.empty and stack.pop
+        //using this it checks if its empty or pops because something was pushed earlier
         Stack<Character> stack = new Stack<Character>(); // create an empty stack
         for (char c : s.toCharArray()) { // loop through each character in the string
             if (c == '(') // if the character is an opening parenthesis

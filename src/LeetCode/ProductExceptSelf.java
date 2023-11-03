@@ -7,20 +7,20 @@ import java.util.Set;
 
 public class ProductExceptSelf {
     //o^2
-//    public int[] productExceptSelf(int[] nums) {
-//
-//        int[] result =new int[nums.length];
-//        for (int i = 0; i < nums.length; i++) {
-//            int tempProduct=1;
-//            for (int j = 0; j < nums.length; j++) {
-//                if(i!=j) {
-//                    tempProduct *= nums[j];
-//                }
-//            }
-//            result[i]=tempProduct;
-//        }
-//        return result;
-//    }
+    public int[] productExceptSelf3(int[] nums) {
+
+        int[] result =new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            int tempProduct=1;
+            for (int j = 0; j < nums.length; j++) {
+                if(i!=j) {
+                    tempProduct *= nums[j];
+                }
+            }
+            result[i]=tempProduct;
+        }
+        return result;
+    }
 
         public int[] productExceptSelf(int[] nums) {
             int n = nums.length;
@@ -41,6 +41,24 @@ public class ProductExceptSelf {
             }
             return res;
         }
+    public int[] productExceptSelf2(int[] nums) {
+
+        int n = nums.length;
+        int[] res = new int[n];
+        int right=1,left=1;
+
+        Arrays.fill(res, 1);
+
+        for (int i=0;i<n;i++) {
+            res[i]*=left;
+            left*=nums[i];
+        }
+        for(int i=n-1;i>=0;i--) {
+            res[i]*=right;
+            right*=nums[i];
+        }
+        return res;
+    }
 
 
 }
