@@ -27,7 +27,7 @@ public class IsAnagram {
         return true;
     }
 
-public boolean isAnagram2(String s, String t) {
+public static boolean isAnagram2(String s, String t) {
     char[] sChars = s.toCharArray();
     char[] tChars = t.toCharArray();
 
@@ -39,7 +39,7 @@ public boolean isAnagram2(String s, String t) {
 
     public static void main(String[] args) {
 
-        System.out.println( isAnagram("rat","car"));
+        System.out.println( isAnagram2("rat","car"));
        
     }
 }
