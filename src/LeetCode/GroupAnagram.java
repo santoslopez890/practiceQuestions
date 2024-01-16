@@ -30,5 +30,6 @@ public class GroupAnagram {
     public static void main(String[] args) {
         String []strs = {"eat","tea","tan","ate","nat","bat"};
         groupAnagrams(strs);
+
     }
 }
