@@ -36,25 +36,7 @@ class TwoSum {
     }
 
 
-    public int[] threeSum(int[] nums, int target) {
-        for (int i = 0; i < ; i++) {
-            
-        }
-        HashMap<Integer, Integer> prevMap = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            int diff = target - num;
-
-            if (prevMap.containsKey(diff)) {
-                return new int[] { prevMap.get(diff), i };
-            }
-
-            prevMap.put(num, i);
-        }
-
-        return new int[] {};
-    }
 
     public static void main(String[] args) {
         int[] nums= new int[]{2,5,5,11};
