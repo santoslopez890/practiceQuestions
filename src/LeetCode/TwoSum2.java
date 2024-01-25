@@ -8,7 +8,6 @@ public class TwoSum2 {
             int left=0;
             while(!flag){
                 if((numbers[left]+numbers[right])==target){
-                    flag=true;
                     break;
                 }
                 else if ((numbers[left]+numbers[right])<target){
